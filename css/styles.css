@@ -1,0 +1,33 @@
+/* ======================================================================
+COLOURS
+====================================================================== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  color: #2b2b2b;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  height: 100%;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+/*# sourceMappingURL=styles.css.map */
