@@ -1,20 +1,19 @@
-body {
+.wrapper {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 .header {
   grid-column: 1 / -1;
-  background-color: limegreen;
 }
 
 .nav {
   grid-column: 1 / 2;
-  background-color: red;
 }
 
 .main {
   grid-column: 2 / -1;
-  background-color: purple;
 }
