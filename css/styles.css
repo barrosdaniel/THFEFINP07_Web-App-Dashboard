@@ -20,7 +20,7 @@ body {
   box-sizing: border-box;
   background-color: #f9f9f9;
   color: #2b2b2b;
-  font-family: "Lato", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400;
   line-height: 1.5;
   height: 100%;
@@ -63,9 +63,13 @@ ul {
 }
 .header__title {
   font-size: 2rem;
+  font-weight: 300;
 }
 .header__title--highlight {
   font-weight: 700;
+}
+.header__title--tm {
+  font-size: 0.8rem;
 }
 .header__widgets {
   display: flex;
@@ -81,6 +85,12 @@ ul {
 }
 .header__widgets--icon {
   fill: #f9f9f9;
+}
+.header__widgets--notification {
+  background-color: limegreen;
+  border-radius: 100%;
+  padding: 0.3rem;
+  transform: translateX(-2px) translateY(-8px);
 }
 .header__widgets--user-image-container {
   height: 3rem;
