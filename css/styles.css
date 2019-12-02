@@ -92,11 +92,27 @@ ul {
   margin-right: 2rem;
 }
 .header__widgets--user-name {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 
 .nav {
+  display: flex;
+  flex-direction: column;
   background-color: #464171;
+}
+.nav__icon-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0 0;
+  padding: 1rem 2rem;
+}
+.nav__icon-container {
+  border-left: 3px solid transparent;
+  fill: #736dab;
+}
+.nav__icon-container--active {
+  border-left: 3px solid limegreen;
+  fill: #f9f9f9;
 }
 
 /*# sourceMappingURL=styles.css.map */
