@@ -4,6 +4,9 @@ COLOURS
 /* ======================================================================
 FONT STACK
 ====================================================================== */
+/* ======================================================================
+MISCELLANIOUS
+====================================================================== */
 *,
 *::before,
 *::after {
@@ -103,6 +106,7 @@ ul {
 }
 .header__widgets--user-name {
   font-size: 1.5rem;
+  color: #ddd;
 }
 
 .nav {
@@ -165,6 +169,23 @@ ul {
   color: #736dab;
   padding: 1rem;
   font-size: 2rem;
+}
+
+.alert {
+  padding: 2rem;
+}
+.alert-box {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  background-color: #736dab;
+  border-radius: 5px;
+  padding: 1rem;
+  color: #ddd;
+  font-size: 1.4rem;
+}
+.alert-box__heading {
+  margin-right: 1rem;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=styles.css.map */

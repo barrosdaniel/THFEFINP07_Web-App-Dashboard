@@ -1,0 +1,19 @@
+.alert {
+  padding: 2rem;
+
+  &-box {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    background-color: $colour-primary;
+    border-radius: $border-radius-small;
+    padding: 1rem;
+    color: $colour-gray-light;
+    font-size: 1.4rem;
+
+    &__heading {
+      margin-right: 1rem;
+      font-weight: bold;
+    }
+
+  }
+}

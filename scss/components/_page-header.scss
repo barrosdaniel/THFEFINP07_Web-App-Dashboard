@@ -24,7 +24,7 @@
     grid-template-columns: 1fr auto;
     width: 45%;
     border: 1px solid $colour-gray-light;
-    border-radius: 5px;
+    border-radius: $border-radius-small;
   }
 
   &__search-box {
