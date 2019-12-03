@@ -163,7 +163,7 @@ ul {
   font-size: 1.4rem;
 }
 .page-header__search-box::placeholder {
-  color: #b7b7b7;
+  color: #bbbbbb;
 }
 .page-header__icon {
   color: #736dab;
@@ -186,6 +186,46 @@ ul {
 .alert-box__heading {
   margin-right: 1rem;
   font-weight: bold;
+}
+
+.traffic {
+  border-bottom: 1px solid #ddd;
+  padding: 2rem;
+  color: #888;
+}
+.traffic__header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  margin-bottom: 2rem;
+}
+.traffic__title {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+.traffic__menu {
+  display: flex;
+  justify-content: flex-end;
+}
+.traffic__button {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  background-color: transparent;
+  color: #888;
+  font-weight: bold;
+  cursor: pointer;
+}
+.traffic__button:not(:last-child) {
+  margin-right: 1.5rem;
+}
+.traffic__button--active {
+  background-color: limegreen;
+  color: #ddd;
+}
+.traffic__chart {
+  height: 400px;
+  width: 100%;
+  background-color: #888;
 }
 
 /*# sourceMappingURL=styles.css.map */

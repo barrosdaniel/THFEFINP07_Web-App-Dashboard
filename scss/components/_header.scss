@@ -37,7 +37,7 @@
     }
 
     &--notification {
-      background-color: limegreen;
+      background-color: $colour-highlight;
       border-radius: 100%;
       padding: 0.3rem;
       transform: translateX(-2px) translateY(-8px);

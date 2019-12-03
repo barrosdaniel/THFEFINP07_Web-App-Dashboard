@@ -1,0 +1,46 @@
+.traffic {
+  border-bottom: 1px solid $colour-gray-light;
+  padding: 2rem;
+  color: $colour-gray;
+
+  &__header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    margin-bottom: 2rem;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__button {
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: $border-radius-large;
+    background-color: transparent;
+    color: $colour-gray;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+
+    &--active {
+      background-color: $colour-highlight;
+      color: $colour-gray-light;
+    }
+  }
+
+  &__chart {
+    height: 400px;
+    width: 100%;
+    background-color: $colour-gray;
+  }
+}
