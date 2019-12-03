@@ -1,0 +1,47 @@
+.page-header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding: 0;
+
+  &__title {
+    font-size: 2.25rem;
+    color: $colour-gray-dark;
+    font-weight: 400;
+    padding: 2rem;
+  }
+
+  &__search {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 1px solid $colour-gray-light;
+    border-left: 1px solid $colour-gray-light;
+    padding: 1rem 2rem;
+  }
+
+  &__search-box-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    width: 45%;
+    border: 1px solid $colour-gray-light;
+    border-radius: 5px;
+  }
+
+  &__search-box {
+    border: none;
+    background-color: $colour-white;
+    padding: 1rem;
+    font-family: $font-primary;
+    font-size: 1.4rem;
+
+    &::placeholder {
+      color: $colour-gray-placeholder;
+    }
+  }
+
+  &__icon {
+    color: $colour-primary;
+    padding: 1rem;
+    font-size: 2rem;
+  }
+}

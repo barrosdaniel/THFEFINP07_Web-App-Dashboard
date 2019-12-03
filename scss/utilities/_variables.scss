@@ -3,9 +3,10 @@ COLOURS
 ====================================================================== */
 $colour-white: #f9f9f9;
 
-$colour-gray-dark: #2b2b2b;
+$colour-gray-dark: #3c3c3c;
 $colour-gray: #777;
-$colour-gray-light: #aaa;
+$colour-gray-placeholder: lighten($colour-gray, 25%);
+$colour-gray-light: #ddd;
 $colour-gray-extra-light: #eee;
 
 $colour-primary: #736dab;
