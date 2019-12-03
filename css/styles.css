@@ -136,7 +136,7 @@ ul {
 }
 .page-header__title {
   font-size: 2.25rem;
-  color: #3c3c3c;
+  color: #777;
   font-weight: 400;
   padding: 2rem;
 }
@@ -163,7 +163,7 @@ ul {
   font-size: 1.4rem;
 }
 .page-header__search-box::placeholder {
-  color: #bbbbbb;
+  color: #b7b7b7;
 }
 .page-header__icon {
   color: #736dab;
@@ -191,7 +191,7 @@ ul {
 .traffic {
   border-bottom: 1px solid #ddd;
   padding: 2rem;
-  color: #888;
+  color: #777;
 }
 .traffic__header {
   display: grid;
@@ -211,7 +211,7 @@ ul {
   padding: 0.5rem 1rem;
   border-radius: 15px;
   background-color: transparent;
-  color: #888;
+  color: #777;
   font-weight: bold;
   cursor: pointer;
 }
@@ -225,7 +225,29 @@ ul {
 .traffic__chart {
   height: 400px;
   width: 100%;
-  background-color: #888;
+  background-color: #777;
+}
+
+.charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid #ddd;
+  color: #777;
+}
+.charts__container {
+  padding: 2rem;
+}
+.charts__container:first-child {
+  border-right: 1px solid #ddd;
+}
+.charts__title {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.charts__chart {
+  background-color: #777;
+  height: 300px;
 }
 
 /*# sourceMappingURL=styles.css.map */

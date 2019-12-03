@@ -1,0 +1,26 @@
+.charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid $colour-gray-light;
+  color: $colour-gray;
+
+  &__container {
+    padding: 2rem;
+
+    &:first-child {
+      border-right: 1px solid $colour-gray-light;
+    }
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  &__chart {
+    background-color: $colour-gray;
+    height: 300px;
+  }
+
+}
