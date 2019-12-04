@@ -15,26 +15,20 @@
   &__title {
     font-size: 1.5rem;
     text-transform: uppercase;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     font-weight: 400;
   }
 
-  &__list {
-    height: 300px;
-  }
-
+  // Member panel
   &__member {
     display: grid;
     grid-template-columns: auto 1fr auto;
     grid-template-rows: auto;
     align-items: center;
+    align-content: center;
+    height: 6.4rem;
     border-bottom: 1px solid $colour-gray-light;
-    padding: 0 0 1.5rem;
-
-    &:not(:first-child) {
-      padding: 1.5rem 0;
-    }
-
+    padding: 1.5rem 0;
   }
 
   &__member-image-container {
@@ -63,6 +57,23 @@
 
   &__member-date {
     font-size: 1.4rem;
+  }
+
+  &__member-text {
+    font-size: 1.3rem;
+  }
+
+  &__member-time {
+    font-size: 1.3rem;
+  }
+
+  &__member-arrow {
+    font-size: 1.3rem;
+  }
+
+  &__member-icon {
+    font-size: 3rem;
+    color: $colour-primary;
   }
 
 }

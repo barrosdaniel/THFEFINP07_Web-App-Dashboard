@@ -326,21 +326,17 @@ ul {
 .members__title {
   font-size: 1.5rem;
   text-transform: uppercase;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   font-weight: 400;
-}
-.members__list {
-  height: 300px;
 }
 .members__member {
   display: grid;
   grid-template-columns: auto 1fr auto;
   grid-template-rows: auto;
   align-items: center;
+  align-content: center;
+  height: 6.4rem;
   border-bottom: 1px solid #ddd;
-  padding: 0 0 1.5rem;
-}
-.members__member:not(:first-child) {
   padding: 1.5rem 0;
 }
 .members__member-image-container {
@@ -364,6 +360,19 @@ ul {
 }
 .members__member-date {
   font-size: 1.4rem;
+}
+.members__member-text {
+  font-size: 1.3rem;
+}
+.members__member-time {
+  font-size: 1.3rem;
+}
+.members__member-arrow {
+  font-size: 1.3rem;
+}
+.members__member-icon {
+  font-size: 3rem;
+  color: #736dab;
 }
 
 /*# sourceMappingURL=styles.css.map */
