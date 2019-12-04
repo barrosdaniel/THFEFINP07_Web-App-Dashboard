@@ -244,7 +244,7 @@ ul {
 .charts__title {
   font-size: 1.5rem;
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   font-weight: 400;
 }
 .charts__chart {
@@ -260,7 +260,7 @@ ul {
 .social__title {
   font-size: 1.5rem;
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   font-weight: 400;
 }
 .social__board {
@@ -309,6 +309,61 @@ ul {
 }
 .social__tile-count {
   font-size: 5rem;
+}
+
+.members {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid #ddd;
+  color: #777;
+}
+.members__container {
+  padding: 2rem;
+}
+.members__container:first-child {
+  border-right: 1px solid #ddd;
+}
+.members__title {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+.members__list {
+  height: 300px;
+}
+.members__member {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 0 0 1.5rem;
+}
+.members__member:not(:first-child) {
+  padding: 1.5rem 0;
+}
+.members__member-image-container {
+  width: 4rem;
+  height: 4rem;
+}
+.members__member-image {
+  width: 100%;
+  border-radius: 100px;
+}
+.members__member-info {
+  padding: 0.5rem 1rem;
+}
+.members__member-name {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+.members__member-email {
+  font-size: 1.4rem;
+  color: #736dab;
+}
+.members__member-date {
+  font-size: 1.4rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
