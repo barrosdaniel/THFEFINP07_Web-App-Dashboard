@@ -36,6 +36,10 @@ ul {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 .wrapper {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -54,6 +58,7 @@ ul {
 
 .main {
   grid-column: 2/-1;
+  padding-bottom: 2rem;
 }
 
 .header {
@@ -119,6 +124,7 @@ ul {
   justify-content: center;
   margin: 2rem 0 0;
   padding: 1rem 2rem;
+  cursor: pointer;
 }
 .nav__icon-container {
   border-left: 3px solid transparent;
@@ -169,6 +175,7 @@ ul {
   color: #736dab;
   padding: 1rem;
   font-size: 2rem;
+  cursor: pointer;
 }
 
 .alert {
@@ -186,6 +193,9 @@ ul {
 .alert-box__heading {
   margin-right: 1rem;
   font-weight: bold;
+}
+.alert-box__close {
+  cursor: pointer;
 }
 
 .traffic {
