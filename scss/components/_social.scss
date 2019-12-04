@@ -1,0 +1,72 @@
+.social {
+  border-bottom: 1px solid $colour-gray-light;
+  padding: 2rem;
+  color: $colour-gray;
+
+  &__title {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-weight: 400;
+  }
+
+  &__board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+  }
+
+  &__tile {
+    display: flex;
+    border: 1px solid $colour-gray-light;
+    border-radius: $border-radius-small;
+    padding: 2rem;
+  }
+
+  &__icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7rem;
+    height: 7rem;
+    background-color: $colour-primary;
+    margin-right: 2rem;
+    padding: 1.5rem;
+    border-radius: $border-radius-extra-large;
+  }
+
+  &__icon {
+    fill: $colour-white;
+
+    &--twitter {
+      transform: translateY(4px);
+    }
+
+    &--facebook {
+      transform: translateX(-1px);
+      transform: translateY(-2px);
+    }
+
+    &--twitter {
+      transform: translateY(4px);
+    }
+
+
+  }
+
+
+  &__info-container {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+  }
+
+  &__tile-name {
+    font-size: 1.8rem;
+    color: $colour-primary;
+  }
+
+  &__tile-count {
+    font-size: 5rem;
+  }
+}

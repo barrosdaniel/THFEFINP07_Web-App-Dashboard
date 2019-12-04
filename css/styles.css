@@ -201,6 +201,7 @@ ul {
 .traffic__title {
   font-size: 1.5rem;
   text-transform: uppercase;
+  font-weight: 400;
 }
 .traffic__menu {
   display: flex;
@@ -244,10 +245,70 @@ ul {
   font-size: 1.5rem;
   text-transform: uppercase;
   margin-bottom: 1rem;
+  font-weight: 400;
 }
 .charts__chart {
   background-color: #777;
   height: 300px;
+}
+
+.social {
+  border-bottom: 1px solid #ddd;
+  padding: 2rem;
+  color: #777;
+}
+.social__title {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+.social__board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem;
+}
+.social__tile {
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 2rem;
+}
+.social__icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 7rem;
+  height: 7rem;
+  background-color: #736dab;
+  margin-right: 2rem;
+  padding: 1.5rem;
+  border-radius: 100px;
+}
+.social__icon {
+  fill: #f9f9f9;
+}
+.social__icon--twitter {
+  transform: translateY(4px);
+}
+.social__icon--facebook {
+  transform: translateX(-1px);
+  transform: translateY(-2px);
+}
+.social__icon--twitter {
+  transform: translateY(4px);
+}
+.social__info-container {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+.social__tile-name {
+  font-size: 1.8rem;
+  color: #736dab;
+}
+.social__tile-count {
+  font-size: 5rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
