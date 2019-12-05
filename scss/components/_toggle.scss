@@ -1,0 +1,58 @@
+/* Switch box adapted from: https://codepen.io/mburnette/pen/LxNxNg
+CodePen Home
+All-CSS Toggle Switch (Checkbox Hack)
+A PEN BY Marcus Burnette PRO
+*/
+
+input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 8rem;
+  height: 3rem;
+  border: 2px solid $colour-gray-placeholder;
+  border-radius: 100px;
+  background: $colour-gray-light;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.switch--on {
+  margin-left: 1rem;
+  color: $colour-white;
+}
+
+.switch--off {
+  margin-right: 1rem;
+  color: $colour-primary;
+}
+
+label:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.6rem;
+  height: 2.6rem;
+  border: 2px solid $colour-gray-placeholder;
+  background: $colour-white;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+input:checked+label {
+  background: $colour-primary;
+}
+
+input:checked+label:after {
+  left: 100%;
+  transform: translateX(-100%);
+}

@@ -1,0 +1,79 @@
+.user {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: $colour-gray;
+
+  &__container {
+    padding: 2rem;
+
+    &:first-child {
+      border-right: 1px solid $colour-gray-light;
+    }
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    font-weight: 400;
+  }
+
+  &__search,
+  &__message {
+    width: 100%;
+    margin-bottom: 2rem;
+    border: 1px solid $colour-gray-light;
+    border-radius: $border-radius-small;
+    background-color: $colour-white;
+    color: $colour-gray;
+    padding: 1rem;
+    font-family: $font-primary;
+    font-size: 1.4rem;
+    resize: none;
+
+    &::placeholder {
+      color: $colour-gray-placeholder;
+    }
+  }
+
+  &__button--send {
+    width: 100%;
+    border: none;
+    border-radius: $border-radius-small;
+    padding: 2rem;
+    background-color: $colour-primary;
+    color: $colour-white;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover,
+      {
+      transform: translateY(-2px);
+      box-shadow: $box-shadow;
+    }
+
+    &:active {
+      transform: none;
+      box-shadow: none;
+    }
+  }
+
+  &__setting {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    &-title {
+      width: 60%;
+      padding: 1rem 0;
+      font-size: 1.5rem;
+      font-weight: 400;
+
+    }
+
+    &-toggle {}
+  }
+}

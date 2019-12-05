@@ -34,7 +34,7 @@
           <img src="images/user-1.jpg" alt="User image"
             class="header__widgets--user-image">
         </div>
-        <a class="header__widgets--user-name">Daniel Barros</a>
+        <a href="" class="header__widgets--user-name">Daniel Barros</a>
       </div>
     </header>
     <!-- Header ends -->
@@ -73,7 +73,7 @@
         <h2 class="page-header__title">Dashboard</h2>
         <div class="page-header__search">
           <div class="page-header__search-box-container">
-            <input type="text" class="page-header__search-box"
+            <input type="search" class="page-header__search-box"
               placeholder="Search">
             <i class="fas fa-search page-header__icon"></i>
           </div>
@@ -105,7 +105,7 @@
             <button class="traffic__button">Monthly</button>
           </div>
         </div>
-        <div class="traffic__chart">TRAFFIC CHART</div>
+        <canvas class="traffic__chart">TRAFFIC CHART</canvas>
       </section>
       <!-- Traffic ends -->
 
@@ -325,6 +325,35 @@
       </section>
       <!-- Activity panel ends -->
       <!-- Members ends -->
+
+      <!-- User start -->
+      <section class="user">
+        <!-- Message panel starts -->
+        <form class="user__container">
+          <h3 class="user__title">Message User</h3>
+          <input type="search" name="user-search" id="userSearch"
+            class="user__search" placeholder="Search for User">
+          <textarea name="user-message" id="userMessage" cols="30" rows="7"
+            class="user__message" placeholder="Message for User"></textarea>
+          <button class="user__button--send" id="sendButton">Send</button>
+        </form>
+        <!-- Message panel ends -->
+        <!-- Settings panel start -->
+        <div class="user__container">
+          <h3 class="user__title">Settings</h3>
+          <div class="user__setting">
+            <h4 class="user__setting-title">Send Email Notifications</h4>
+            <input type="checkbox" id="switch" class="user__setting-toggle" />
+            <label for="switch" class="switch">
+              <span class="switch--on">on</span><span
+                class="switch--off">off</span>
+            </label>
+          </div>
+
+        </div>
+        <!-- Settings panel ends -->
+      </section>
+      <!-- User end -->
 
 
 

@@ -58,7 +58,7 @@ a {
 
 .main {
   grid-column: 2/-1;
-  padding-bottom: 2rem;
+  padding-bottom: 4rem;
 }
 
 .header {
@@ -90,6 +90,7 @@ a {
   padding-right: 1.5rem;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .header__widgets--icon {
   fill: #f9f9f9;
@@ -164,6 +165,7 @@ a {
 .page-header__search-box {
   border: none;
   background-color: #f9f9f9;
+  color: #777;
   padding: 1rem;
   font-family: "Open Sans", sans-serif;
   font-size: 1.4rem;
@@ -383,6 +385,128 @@ a {
 .members__member-icon {
   font-size: 3rem;
   color: #736dab;
+}
+
+.user {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: #777;
+}
+.user__container {
+  padding: 2rem;
+}
+.user__container:first-child {
+  border-right: 1px solid #ddd;
+}
+.user__title {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+.user__search, .user__message {
+  width: 100%;
+  margin-bottom: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  color: #777;
+  padding: 1rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.4rem;
+  resize: none;
+}
+.user__search::placeholder, .user__message::placeholder {
+  color: #b7b7b7;
+}
+.user__button--send {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 2rem;
+  background-color: #736dab;
+  color: #f9f9f9;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.user__button--send:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+.user__button--send:active {
+  transform: none;
+  box-shadow: none;
+}
+.user__setting {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.user__setting-title {
+  width: 60%;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+/* Switch box adapted from: https://codepen.io/mburnette/pen/LxNxNg
+CodePen Home
+All-CSS Toggle Switch (Checkbox Hack)
+A PEN BY Marcus Burnette PRO
+*/
+input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 8rem;
+  height: 3rem;
+  border: 2px solid #b7b7b7;
+  border-radius: 100px;
+  background: #ddd;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.switch--on {
+  margin-left: 1rem;
+  color: #f9f9f9;
+}
+
+.switch--off {
+  margin-right: 1rem;
+  color: #736dab;
+}
+
+label:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.6rem;
+  height: 2.6rem;
+  border: 2px solid #b7b7b7;
+  background: #f9f9f9;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background: #736dab;
+}
+
+input:checked + label:after {
+  left: 100%;
+  transform: translateX(-100%);
 }
 
 /*# sourceMappingURL=styles.css.map */
