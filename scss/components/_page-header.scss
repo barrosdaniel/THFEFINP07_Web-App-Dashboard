@@ -40,10 +40,15 @@
     }
   }
 
+  &__search-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
   &__icon {
     color: $colour-primary;
     padding: 1rem;
     font-size: 2rem;
-    cursor: pointer;
   }
 }

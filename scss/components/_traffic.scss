@@ -26,11 +26,12 @@
     border-radius: $border-radius-large;
     background-color: transparent;
     color: $colour-gray;
+    font-size: 1.3rem;
     font-weight: bold;
     cursor: pointer;
 
     &:not(:last-child) {
-      margin-right: 1.5rem;
+      margin-right: 1rem;
     }
 
     &--active {

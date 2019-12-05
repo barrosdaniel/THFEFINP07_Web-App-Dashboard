@@ -16,6 +16,7 @@
 
 <body>
   <div class="wrapper">
+
     <!-- Header start -->
     <header class="header">
       <h1 class="header__title"><span
@@ -75,7 +76,10 @@
           <div class="page-header__search-box-container">
             <input type="search" class="page-header__search-box"
               placeholder="Search">
-            <i class="fas fa-search page-header__icon"></i>
+            <button class="page-header__search-button">
+              <i class="fas fa-search page-header__icon"></i>
+            </button>
+
           </div>
         </div>
       </section>
@@ -88,24 +92,25 @@
           <div class="alert-box__message">Lorem ipsum dolor sit amet consectetur
             adipisicing elit. Corrupti, veritatis voluptas animi
             voluptate!</div>
-          <div class="alert-box__close"><i class="fas fa-times"></i></div>
+          <button class="alert-box__close"><i class="fas fa-times"></i></button>
         </div>
       </section>
       <!-- Alert ends -->
 
       <!-- Traffic starts -->
       <section class="traffic">
-        <div class="traffic__header">
+        <header class="traffic__header">
           <h3 class="traffic__title">Traffic</h3>
-          <div class="traffic__menu">
-            <button class="traffic__button">Hourly</button>
-            <button class="traffic__button">Daily</button>
-            <button
-              class="traffic__button traffic__button--active">Weekly</button>
-            <button class="traffic__button">Monthly</button>
-          </div>
+          <ul class="traffic__menu">
+            <li class="traffic__button">Hourly</li>
+            <li class="traffic__button">Daily</li>
+            <li class="traffic__button traffic__button--active">Weekly</li>
+            <li class="traffic__button">Monthly</li>
+          </ul>
+        </header>
+        <div class="traffic__chart-container">
+          <canvas class="traffic__chart">TRAFFIC CHART</canvas>
         </div>
-        <canvas class="traffic__chart">TRAFFIC CHART</canvas>
       </section>
       <!-- Traffic ends -->
 
@@ -113,11 +118,15 @@
       <section class="charts">
         <div class="charts__container">
           <h3 class="charts__title">Daily Traffic</h3>
-          <div class="charts__chart">DAILY TRAFFIC</div>
+          <div class="charts__chart charts__chart--daily-container">
+            <canvas class="charts__chart--daily">DAILY TRAFFIC</canvas>
+          </div>
         </div>
         <div class="charts__container">
           <h3 class="charts__title">Mobile Users</h3>
-          <div class="charts__chart">DAILY TRAFFIC</div>
+          <div class="charts__chart charts__chart--mobile-container">
+            <canvas class="charts__chart--mobile">MOBILE USERS</canvas>
+          </div>
         </div>
       </section>
       <!-- Charts ends -->
@@ -126,6 +135,7 @@
       <section class="social">
         <h3 class="social__title">Social Stats</h3>
         <div class="social__board">
+
           <!-- Twitter Tile start -->
           <div class="social__tile">
             <div class="social__icon-container">
@@ -172,6 +182,7 @@
             </div>
           </div>
           <!-- Google+ tile ends -->
+
         </div>
       </section>
       <!-- Social ends -->
@@ -182,6 +193,7 @@
         <div class="members__container">
           <h3 class="members__title">New Members</h3>
           <div class="members__list">
+
             <!-- Member 1 Tile starts -->
             <div class="members__member">
               <div class="members__member-image-container">
@@ -194,7 +206,7 @@
                   class="members__member-email">victoria.chamers@example.com
                 </a>
               </div>
-              <div class="members__member-date">15/10/2015</div>
+              <p class="members__member-date">15/10/2019</p>
             </div>
             <!-- Member 1 Tile ends -->
 
@@ -210,7 +222,7 @@
                   class="members__member-email">dale.byrd52@example.com
                 </a>
               </div>
-              <div class="members__member-date">14/10/2015</div>
+              <p class="members__member-date">14/10/2019</p>
             </div>
             <!-- Member 2 Tile ends -->
 
@@ -226,7 +238,7 @@
                   class="members__member-email">dawn.wood16@example.com
                 </a>
               </div>
-              <div class="members__member-date">13/10/2015</div>
+              <p class="members__member-date">13/10/2019</p>
             </div>
             <!-- Member 3 Tile ends -->
 
@@ -242,9 +254,10 @@
                   class="members__member-email">dan.oliver82@example.com
                 </a>
               </div>
-              <div class="members__member-date">12/10/2015</div>
+              <p class="members__member-date">12/10/2019</p>
             </div>
             <!-- Member 4 Tile ends -->
+
           </div>
         </div>
         <!-- Members panel ends -->
@@ -253,6 +266,7 @@
         <div class="members__container">
           <h3 class="members__title">Recent Activity</h3>
           <div class="members__list">
+
             <!-- Activity 1 Tile starts -->
             <div class="members__member">
               <div class="members__member-image-container">
@@ -320,14 +334,17 @@
               </a>
             </div>
             <!-- Activity 4 Tile ends -->
+
           </div>
         </div>
+        <!-- Activity panel ends -->
+
       </section>
-      <!-- Activity panel ends -->
       <!-- Members ends -->
 
       <!-- User start -->
       <section class="user">
+
         <!-- Message panel starts -->
         <form class="user__container">
           <h3 class="user__title">Message User</h3>
@@ -338,26 +355,31 @@
           <button class="user__button--send" id="sendButton">Send</button>
         </form>
         <!-- Message panel ends -->
+
         <!-- Settings panel start -->
         <div class="user__container">
           <h3 class="user__title">Settings</h3>
           <div class="user__setting">
             <h4 class="user__setting-title">Send Email Notifications</h4>
+            <!-- Switch 1 starts -->
             <input type="checkbox" id="switchEmailNotifications"
               class="user__setting-toggle" />
             <label for="switchEmailNotifications" class="switch">
               <span class="switch--on">on</span><span
                 class="switch--off">off</span>
             </label>
+            <!-- Switch 1 ends -->
           </div>
           <div class="user__setting">
             <h4 class="user__setting-title">Set Profile to Public</h4>
+            <!-- Switch 2 starts -->
             <input type="checkbox" id="switchProfilePublic"
               class="user__setting-toggle" />
             <label for="switchProfilePublic" class="switch">
               <span class="switch--on">on</span><span
                 class="switch--off">off</span>
             </label>
+            <!-- Switch 2 ends -->
           </div>
           <div class="user__setting">
             <select name="time-zone" id="selectTimeZone"
@@ -378,13 +400,9 @@
           </div>
         </div>
         <!-- Settings panel ends -->
+
       </section>
       <!-- User end -->
-
-
-
-
-
 
     </main>
     <!-- Main ends -->

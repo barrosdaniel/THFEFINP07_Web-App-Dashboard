@@ -173,11 +173,15 @@ a {
 .page-header__search-box::placeholder {
   color: #b7b7b7;
 }
+.page-header__search-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
 .page-header__icon {
   color: #736dab;
   padding: 1rem;
   font-size: 2rem;
-  cursor: pointer;
 }
 
 .alert {
@@ -197,6 +201,9 @@ a {
   font-weight: bold;
 }
 .alert-box__close {
+  border: none;
+  background-color: #736dab;
+  color: #f9f9f9;
   cursor: pointer;
 }
 
@@ -225,11 +232,12 @@ a {
   border-radius: 15px;
   background-color: transparent;
   color: #777;
+  font-size: 1.3rem;
   font-weight: bold;
   cursor: pointer;
 }
 .traffic__button:not(:last-child) {
-  margin-right: 1.5rem;
+  margin-right: 1rem;
 }
 .traffic__button--active {
   background-color: limegreen;

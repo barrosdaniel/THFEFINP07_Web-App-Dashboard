@@ -16,6 +16,9 @@
     }
 
     &__close {
+      border: none;
+      background-color: $colour-primary;
+      color: $colour-white;
       cursor: pointer;
     }
 
