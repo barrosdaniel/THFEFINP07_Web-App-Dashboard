@@ -333,7 +333,7 @@
           <h3 class="user__title">Message User</h3>
           <input type="search" name="user-search" id="userSearch"
             class="user__search" placeholder="Search for User">
-          <textarea name="user-message" id="userMessage" cols="30" rows="7"
+          <textarea name="user-message" id="userMessage" cols="30" rows="5"
             class="user__message" placeholder="Message for User"></textarea>
           <button class="user__button--send" id="sendButton">Send</button>
         </form>
@@ -343,13 +343,39 @@
           <h3 class="user__title">Settings</h3>
           <div class="user__setting">
             <h4 class="user__setting-title">Send Email Notifications</h4>
-            <input type="checkbox" id="switch" class="user__setting-toggle" />
-            <label for="switch" class="switch">
+            <input type="checkbox" id="switchEmailNotifications"
+              class="user__setting-toggle" />
+            <label for="switchEmailNotifications" class="switch">
               <span class="switch--on">on</span><span
                 class="switch--off">off</span>
             </label>
           </div>
-
+          <div class="user__setting">
+            <h4 class="user__setting-title">Set Profile to Public</h4>
+            <input type="checkbox" id="switchProfilePublic"
+              class="user__setting-toggle" />
+            <label for="switchProfilePublic" class="switch">
+              <span class="switch--on">on</span><span
+                class="switch--off">off</span>
+            </label>
+          </div>
+          <div class="user__setting">
+            <select name="time-zone" id="selectTimeZone"
+              class="user__setting-time-zone">
+              <option disabled selected>Select a Time Zone</option>
+              <option value="eastern">Western Standard Time (WST) – UTC+08:00
+              </option>
+              <option value="eastern">Central Standard Time (ACST) – UTC+09:30
+              </option>
+              <option value="eastern">Eastern Standard Time (AEST) – UTC+10:00
+              </option>
+            </select>
+          </div>
+          <div class="user__button-container">
+            <button class="user__button--save" id="saveButton">Save</button>
+            <button class="user__button--cancel"
+              id="cancelButton">Cancel</button>
+          </div>
         </div>
         <!-- Settings panel ends -->
       </section>

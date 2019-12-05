@@ -5,7 +5,7 @@ COLOURS
 FONT STACK
 ====================================================================== */
 /* ======================================================================
-MISCELLANIOUS
+MISCELLANEOUS
 ====================================================================== */
 *,
 *::before,
@@ -451,6 +451,48 @@ a {
   font-size: 1.5rem;
   font-weight: 400;
 }
+.user__setting-time-zone {
+  width: 100%;
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  background-color: #f9f9f9;
+  color: #b7b7b7;
+  font-family: "Open Sans", sans-serif;
+  appearance: none;
+}
+.user__button-container {
+  display: flex;
+  justify-content: space-between;
+}
+.user__button--save, .user__button--cancel {
+  width: 47.5%;
+  border: none;
+  border-radius: 5px;
+  padding: 2rem;
+  background-color: #736dab;
+  color: #f9f9f9;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.user__button--save:hover, .user__button--cancel:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+.user__button--save:active, .user__button--cancel:active {
+  transform: none;
+  box-shadow: none;
+}
+.user__button--cancel {
+  background-color: #b7b7b7;
+  color: #f9f9f9;
+}
+
 /* Switch box adapted from: https://codepen.io/mburnette/pen/LxNxNg
 CodePen Home
 All-CSS Toggle Switch (Checkbox Hack)

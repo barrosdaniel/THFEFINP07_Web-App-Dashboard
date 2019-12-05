@@ -71,9 +71,57 @@
       padding: 1rem 0;
       font-size: 1.5rem;
       font-weight: 400;
-
     }
 
     &-toggle {}
+
+    &-time-zone {
+      width: 100%;
+      margin-top: 1.2rem;
+      margin-bottom: 0.4rem;
+      border: 1px solid $colour-gray-light;
+      border-radius: $border-radius-small;
+      padding: 1rem 2rem;
+      background-color: $colour-white;
+      color: $colour-gray-placeholder;
+      font-family: $font-primary;
+      appearance: none;
+    }
+  }
+
+  &__button-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__button--save,
+  &__button--cancel {
+    width: 47.5%;
+    border: none;
+    border-radius: $border-radius-small;
+    padding: 2rem;
+    background-color: $colour-primary;
+    color: $colour-white;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover,
+      {
+      transform: translateY(-2px);
+      box-shadow: $box-shadow;
+    }
+
+    &:active {
+      transform: none;
+      box-shadow: none;
+    }
+  }
+
+  &__button--cancel {
+    background-color: $colour-gray-placeholder;
+    color: $colour-white;
   }
 }
