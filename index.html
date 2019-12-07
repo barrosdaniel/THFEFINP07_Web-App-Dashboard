@@ -24,23 +24,25 @@
           class="header__title--tm"> TM</sup>
       </h1>
       <div class="header__widgets">
-        <div class="header__widgets--icon-container">
-          <svg height="20" width="20">
-            <use class="header__widgets--icon"
-              xlink:href="sprite/sprite.svg#icon-bell" />
-          </svg>
-          <div class="header__widgets--notification"></div>
-        </div>
-        <!-- Hoverable notifications start-->
         <div class="header__widgets--dropdown">
-          <a href="#" class="header__widgets--dropdown-notification">You have
-            new views</a>
-          <a href="#" class="header__widgets--dropdown-notification">You have
-            new likes</a>
-          <a href="#" class="header__widgets--dropdown-notification">You have
-            new shares</a>
+          <div class="header__widgets--icon-container">
+            <svg height="20" width="20">
+              <use class="header__widgets--icon"
+                xlink:href="sprite/sprite.svg#icon-bell" />
+            </svg>
+            <div class="header__widgets--notification"></div>
+          </div>
+          <!-- Hoverable notifications start-->
+          <div class="header__widgets--dropdown-content">
+            <a href="#" class="header__widgets--dropdown-notification">You have
+              new views</a>
+            <a href="#" class="header__widgets--dropdown-notification">You have
+              new likes</a>
+            <a href="#" class="header__widgets--dropdown-notification">You have
+              new shares</a>
+          </div>
+          <!-- Hoverable notifications end-->
         </div>
-        <!-- Hoverable notifications end-->
         <div class="header__widgets--user-image-container">
           <img src="images/user-1.jpg" alt="User image"
             class="header__widgets--user-image">
