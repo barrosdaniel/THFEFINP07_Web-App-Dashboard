@@ -6,12 +6,16 @@ const newNotificationsMarker = document.querySelector('.header__widgets--notific
 const dropdownContent = document.querySelector('.header__widgets--dropdown-content');
 const alertSection = document.querySelector('.alert');
 const alertBox = document.querySelector('.alert-box');
+const userSearch = document.querySelector('.user__search');
+const userMessage = document.querySelector('.user__message');
+const userSendButton = document.querySelector('.user__button--send');
 
 /* ======================================================================
 Event Listeners
 ====================================================================== */
 notificationsIcon.addEventListener('click', notificationsDropdownClick);
 alertBox.addEventListener('click', closeAlertBox);
+userSendButton.addEventListener('click', sendUserMessage);
 
 
 /* ======================================================================
@@ -37,6 +41,17 @@ function closeAlertBox(e) {
   if (e.target.tagName === 'BUTTON' || e.target.tagName === 'I') {
     alertBox.style.display = 'none';
     alertSection.style.padding = '0';
+  }
+}
+
+function sendUserMessage(e) {
+  e.preventDefault();
+  if (userSearch.value === "") {
+    alert(`Please enter a user name.`);
+  } else if (userMessage.value === "") {
+    alert(`Please enter a message for ${userSearch.value}.`);
+  } else {
+    alert(`Your message has been sent to ${userSearch.value}.`);
   }
 }
 
