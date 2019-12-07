@@ -275,7 +275,7 @@ a {
 }
 .traffic__button--active {
   background-color: limegreen;
-  color: #ddd;
+  color: #f9f9f9;
 }
 .traffic__chart {
   width: 100%;
@@ -299,10 +299,6 @@ a {
   text-transform: uppercase;
   margin-bottom: 2rem;
   font-weight: 400;
-}
-.charts__chart {
-  background-color: #777;
-  height: 300px;
 }
 
 .social {
