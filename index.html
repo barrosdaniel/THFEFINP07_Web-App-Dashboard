@@ -10,6 +10,8 @@
   <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css">
   <link rel="stylesheet" href="css/styles.css">
   <title>DBarrosApp | Dashboard</title>
 </head>
@@ -100,10 +102,9 @@
       <!-- Alert start -->
       <section class="alert">
         <div class="alert-box">
-          <div class="alert-box__heading">Alert</div>
-          <div class="alert-box__message">Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Corrupti, veritatis voluptas animi
-            voluptate!</div>
+          <div class="alert-box__heading">Alert:</div>
+          <div class="alert-box__message">You have <strong>6</strong> overdue
+            tasks to complete.</div>
           <button class="alert-box__close"><i class="fas fa-times"></i></button>
         </div>
       </section>
@@ -419,6 +420,9 @@
     </main>
     <!-- Main ends -->
   </div>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js">
+  </script>
 
   <script src="js/app.js"></script>
 </body>

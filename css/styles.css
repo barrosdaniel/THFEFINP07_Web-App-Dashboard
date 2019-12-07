@@ -66,7 +66,7 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
-  background-color: #736dab;
+  background-color: #7477bf;
   color: #f9f9f9;
 }
 .header__title {
@@ -129,7 +129,7 @@ a {
 }
 .header__widgets--user-image-container {
   height: 3rem;
-  border-left: 1px solid #464171;
+  border-left: 1px solid #41448c;
   padding-left: 2rem;
 }
 .header__widgets--user-image {
@@ -146,7 +146,7 @@ a {
 .nav {
   display: flex;
   flex-direction: column;
-  background-color: #464171;
+  background-color: #41448c;
 }
 .nav__icon-container {
   display: flex;
@@ -157,7 +157,7 @@ a {
 }
 .nav__icon-container {
   border-left: 3px solid transparent;
-  fill: #736dab;
+  fill: #7477bf;
 }
 .nav__icon-container--active {
   border-left: 3px solid limegreen;
@@ -207,7 +207,7 @@ a {
   cursor: pointer;
 }
 .page-header__icon {
-  color: #736dab;
+  color: #7477bf;
   padding: 1rem;
   font-size: 2rem;
 }
@@ -219,20 +219,20 @@ a {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  background-color: #736dab;
+  background-color: #7477bf;
   border-radius: 5px;
   padding: 1rem;
   color: #ddd;
   font-size: 1.4rem;
 }
 .alert-box__heading {
-  margin-right: 1rem;
+  margin-right: 2rem;
   font-weight: bold;
 }
 .alert-box__close {
   border: none;
   padding: 0.5rem;
-  background-color: #736dab;
+  background-color: #7477bf;
   color: #f9f9f9;
   cursor: pointer;
   transition: 0.2s all;
@@ -278,9 +278,8 @@ a {
   color: #ddd;
 }
 .traffic__chart {
-  height: 400px;
   width: 100%;
-  background-color: #777;
+  height: 40rem;
 }
 
 .charts {
@@ -334,7 +333,7 @@ a {
   align-items: center;
   width: 7rem;
   height: 7rem;
-  background-color: #736dab;
+  background-color: #7477bf;
   margin-right: 2rem;
   padding: 1.5rem;
   border-radius: 100px;
@@ -359,7 +358,7 @@ a {
 }
 .social__tile-name {
   font-size: 1.8rem;
-  color: #736dab;
+  color: #7477bf;
 }
 .social__tile-count {
   font-size: 5rem;
@@ -410,7 +409,7 @@ a {
 }
 .members__member-email {
   font-size: 1.4rem;
-  color: #736dab;
+  color: #7477bf;
 }
 .members__member-date {
   font-size: 1.4rem;
@@ -426,7 +425,7 @@ a {
 }
 .members__member-icon {
   font-size: 3rem;
-  color: #736dab;
+  color: #7477bf;
 }
 
 .user {
@@ -466,7 +465,7 @@ a {
   border: none;
   border-radius: 5px;
   padding: 2rem;
-  background-color: #736dab;
+  background-color: #7477bf;
   color: #f9f9f9;
   text-transform: uppercase;
   font-weight: 700;
@@ -514,7 +513,7 @@ a {
   border: none;
   border-radius: 5px;
   padding: 2rem;
-  background-color: #736dab;
+  background-color: #7477bf;
   color: #f9f9f9;
   text-transform: uppercase;
   font-weight: 700;
@@ -568,7 +567,7 @@ label {
 
 .switch--off {
   margin-right: 1rem;
-  color: #736dab;
+  color: #7477bf;
 }
 
 label:after {
@@ -585,7 +584,7 @@ label:after {
 }
 
 input:checked + label {
-  background: #736dab;
+  background: #7477bf;
 }
 
 input:checked + label:after {
