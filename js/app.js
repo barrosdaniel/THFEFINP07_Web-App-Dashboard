@@ -46,7 +46,9 @@ function closeAlertBox(e) {
 
 function sendUserMessage(e) {
   e.preventDefault();
-  if (userSearch.value === "") {
+  if (userSearch.value === "" && userMessage.value === "") {
+    alert(`PLease enter a user name and a message.`);
+  } else if (userSearch.value === "") {
     alert(`Please enter a user name.`);
   } else if (userMessage.value === "") {
     alert(`Please enter a message for ${userSearch.value}.`);
