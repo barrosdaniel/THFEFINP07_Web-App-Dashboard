@@ -24,13 +24,16 @@
     align-items: center;
 
     &--icon-container {
-      margin: 0 2rem;
       height: 4rem;
-      border-right: 1px solid $colour-primary-dark;
-      padding-right: 1.5rem;
+      padding: 0 1.5rem;
       display: flex;
       align-items: center;
       cursor: pointer;
+      transition: 0.3s all;
+
+      &:hover {
+        transform: scale(1.2);
+      }
     }
 
     &--icon {
@@ -44,8 +47,16 @@
       transform: translateX(-2px) translateY(-8px);
     }
 
+    &--dropdown {
+      display: none;
+
+      &-notification {}
+    }
+
     &--user-image-container {
       height: 3rem;
+      border-left: 1px solid $colour-primary-dark;
+      padding-left: 2rem;
     }
 
     &--user-image {
