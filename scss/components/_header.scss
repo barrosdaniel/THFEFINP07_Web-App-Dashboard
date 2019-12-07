@@ -57,7 +57,7 @@
         min-width: 20rem;
         box-shadow: $box-shadow;
         z-index: 10;
-        // transition: 0.2s all;
+        transition: 0.2s all;
       }
 
       &-notification {
@@ -75,9 +75,9 @@
         }
       }
 
-      &:hover &-content {
-        display: block;
-      }
+      // &:hover &-content {
+      //   display: block;
+      // }
 
       &:hover .header__widgets--icon-container {
         transform: scale(1.2);

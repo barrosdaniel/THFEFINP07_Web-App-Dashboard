@@ -110,6 +110,7 @@ a {
   min-width: 20rem;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   z-index: 10;
+  transition: 0.2s all;
 }
 .header__widgets--dropdown-notification {
   display: block;
@@ -122,9 +123,6 @@ a {
 }
 .header__widgets--dropdown-notification:hover {
   background-color: #b7b7b7;
-}
-.header__widgets--dropdown:hover .header__widgets--dropdown-content {
-  display: block;
 }
 .header__widgets--dropdown:hover .header__widgets--icon-container {
   transform: scale(1.2);
