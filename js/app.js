@@ -60,8 +60,14 @@ function closeAlertBox(e) {
 // Traffic Chart Section
 function ChangeTrafficChartPeriod(e) {
   if (e.target.classList.value.includes('traffic__button')) {
+    // Change chart period
     trafficChartPeriod = e.target.textContent.toLowerCase();
     renderTrafficCanvas();
+    // Change active button
+    trafficButtons.forEach((button) => {
+      button.classList.remove('traffic__button--active');
+    });
+    e.target.classList.add('traffic__button--active');
   } else {
     console.log(`Chart period not specified`);
   }
@@ -111,9 +117,7 @@ let trafficChartPeriod = 'weekly';
 
 function getTrafficChartData() {
   const period = trafficChartPeriod;
-  console.log(period);
   const chartData = [];
-  console.log(chartData);
 
   if (period === 'hourly') {
     chartData.push(hourlyLabels);
@@ -133,7 +137,6 @@ function getTrafficChartData() {
 
 function renderTrafficCanvas() {
   const chartData = getTrafficChartData();
-  console.log(chartData);
   const labels = chartData[0];
   const data = chartData[1];
 
