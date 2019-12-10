@@ -1,6 +1,7 @@
 /* ======================================================================
 UI Elements
 ====================================================================== */
+const body = document.querySelector('body');
 const notificationsIcon = document.querySelector('.header__widgets--icon-container');
 const newNotificationsMarker = document.querySelector('.header__widgets--notification');
 const dropdownContent = document.querySelector('.header__widgets--dropdown-content');
@@ -16,6 +17,7 @@ Event Listeners
 notificationsIcon.addEventListener('click', notificationsDropdownClick);
 alertBox.addEventListener('click', closeAlertBox);
 userSendButton.addEventListener('click', sendUserMessage);
+body.addEventListener('click', notificationsDropdownHideOnClickOutside);
 
 
 /* ======================================================================
@@ -28,6 +30,12 @@ dropdownContent.style.display = 'none';
 /* ======================================================================
 Logic
 ====================================================================== */
+function notificationsDropdownHideOnClickOutside(e) {
+  if (dropdownContent.style.display === 'block' && e.target.parentElement.classList.value !== 'header__widgets--dropdown-content' && e.target.parentElement.classList.value !== 'header__widgets--icon-container') {
+    dropdownContent.style.display = 'none';
+  }
+}
+
 function notificationsDropdownClick() {
   newNotificationsMarker.style.visibility = 'hidden';
   if (dropdownContent.style.display === 'none') {
@@ -47,7 +55,7 @@ function closeAlertBox(e) {
 function sendUserMessage(e) {
   e.preventDefault();
   if (userSearch.value === "" && userMessage.value === "") {
-    alert(`PLease enter a user name and a message.`);
+    alert(`Please enter a user name and a message.`);
   } else if (userSearch.value === "") {
     alert(`Please enter a user name.`);
   } else if (userMessage.value === "") {
