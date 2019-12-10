@@ -269,6 +269,7 @@ a {
   font-size: 1.3rem;
   font-weight: bold;
   cursor: pointer;
+  transition: 0.3s all;
 }
 .traffic__button:not(:last-child) {
   margin-right: 1rem;
@@ -455,6 +456,33 @@ a {
 }
 .user__search::placeholder, .user__message::placeholder {
   color: #b7b7b7;
+}
+.user__autocomplete {
+  position: relative;
+}
+.user__autocomplete-items {
+  position: absolute;
+  border: 1px solid #b7b7b7;
+  border-top: none;
+  border-bottom: none;
+  z-index: 10;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.user__autocomplete-items--active {
+  background-color: #7477bf;
+  color: #f9f9f9;
+}
+.user__autocomplete-items-container {
+  padding: 1rem;
+  background-color: #ddd;
+  color: #3c3c3c;
+  border-bottom: 1px solid #b7b7b7;
+  cursor: pointer;
+}
+.user__autocomplete-items-container:hover {
+  background-color: #b7b7b7;
 }
 .user__button--send {
   width: 100%;
