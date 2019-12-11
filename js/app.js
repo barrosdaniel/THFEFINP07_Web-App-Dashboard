@@ -110,19 +110,15 @@ function renderAutocompleteContainer(matches) {
 }
 
 function fillUserInput(e) {
-  console.log(e.target);
   let chosenName = '';
 
   if (e.target.className === 'user__autocomplete-item') {
     chosenName = e.target.textContent;
   }
 
-  console.log(chosenName);
-
   userSearch.value = chosenName;
   userAutocompleteContainer.innerHTML = '';
   userAutocompleteContainer.style.display = 'none';
-
 }
 
 function sendUserMessage(e) {
@@ -141,8 +137,6 @@ function sendUserMessage(e) {
 /* ======================================================================
 Testing
 ====================================================================== */
-// console.log(alertBox);
-
 
 
 
