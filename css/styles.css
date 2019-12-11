@@ -457,32 +457,26 @@ a {
 .user__search::placeholder, .user__message::placeholder {
   color: #b7b7b7;
 }
-.user__autocomplete {
-  position: relative;
-}
-.user__autocomplete-items {
+.user__autocomplete-container {
+  margin-top: -2rem;
+  display: none;
   position: absolute;
-  border: 1px solid #b7b7b7;
-  border-top: none;
-  border-bottom: none;
+  min-width: 20rem;
   z-index: 10;
-  top: 100%;
-  left: 0;
-  right: 0;
+  border: 1px solid #b7b7b7;
+  background-color: #eee;
 }
-.user__autocomplete-items--active {
-  background-color: #7477bf;
-  color: #f9f9f9;
-}
-.user__autocomplete-items-container {
+.user__autocomplete-item {
   padding: 1rem;
-  background-color: #ddd;
-  color: #3c3c3c;
-  border-bottom: 1px solid #b7b7b7;
+  font-size: 1.5rem;
   cursor: pointer;
+  transition: 0.2s all;
 }
-.user__autocomplete-items-container:hover {
-  background-color: #b7b7b7;
+.user__autocomplete-item:hover {
+  background-color: #ddd;
+}
+.user__autocomplete-item:not(:last-child) {
+  border-bottom: 1px solid #b7b7b7;
 }
 .user__button--send {
   width: 100%;
