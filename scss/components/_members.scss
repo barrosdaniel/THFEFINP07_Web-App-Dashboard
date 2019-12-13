@@ -1,22 +1,33 @@
 .members {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border-bottom: 1px solid $colour-gray-light;
   color: $colour-gray;
+
+  @include mq('lg') {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid $colour-gray-light;
+  }
 
   &__container {
     padding: 2rem;
 
     &:first-child {
-      border-right: 1px solid $colour-gray-light;
+      @include mq('lg') {
+        border-right: 1px solid $colour-gray-light;
+      }
     }
   }
 
   &__title {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    text-align: center;
     text-transform: uppercase;
     margin-bottom: 1rem;
     font-weight: 400;
+
+    @include mq('sm') {
+      font-size: 1.5rem;
+      text-align: left;
+    }
   }
 
   &__member {
@@ -55,7 +66,12 @@
   }
 
   &__member-date {
+    display: none;
     font-size: 1.4rem;
+
+    @include mq('sm') {
+      display: block;
+    }
   }
 
   &__member-text {

@@ -1,7 +1,7 @@
 .charts {
   color: $colour-gray;
 
-  @include mq('lg') {
+  @include mq('md') {
     display: grid;
     grid-template-columns: 50% 50%;
     border-bottom: 1px solid $colour-gray-light;
@@ -10,13 +10,13 @@
   &__container {
     padding: 2rem 2rem 0;
 
-    @include mq('lg') {
+    @include mq('md') {
       padding: 2rem;
     }
 
     &:first-child {
 
-      @include mq('lg') {
+      @include mq('md') {
         border-right: 1px solid $colour-gray-light;
       }
 
@@ -30,7 +30,7 @@
     font-weight: 400;
     text-align: center;
 
-    @include mq('lg') {
+    @include mq('sm') {
       margin-bottom: 2rem;
       font-size: 1.5rem;
       text-align: left;

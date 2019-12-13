@@ -21,10 +21,16 @@
   }
 
   &__title {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    text-align: center;
     text-transform: uppercase;
     margin-bottom: 2rem;
     font-weight: 400;
+
+    @include mq('sm') {
+      font-size: 1.5rem;
+      text-align: left;
+    }
   }
 
   &__search,
@@ -72,6 +78,7 @@
 
   &__button--send {
     width: 100%;
+    margin: 0 0 1.5rem;
     border: none;
     border-radius: $border-radius-small;
     padding: 2rem;
@@ -82,6 +89,10 @@
     letter-spacing: 1px;
     cursor: pointer;
     transition: all 0.3s;
+
+    @include mq('lg') {
+      margin: 0;
+    }
 
     &:hover {
       transform: translateY(-2px);

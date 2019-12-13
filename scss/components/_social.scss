@@ -1,10 +1,13 @@
 .social {
-  border-bottom: 1px solid $colour-gray-light;
   padding: 2rem 1rem;
   color: $colour-gray;
 
   @include mq('sm') {
     padding: 2rem;
+  }
+
+  @include mq('md') {
+    border-bottom: 1px solid $colour-gray-light;
   }
 
   &__title {
@@ -15,10 +18,10 @@
     font-weight: 400;
 
     @include mq('md') {
-      margin: 2rem 0;
+      margin: 0 0 2rem;
     }
 
-    @include mq('lg') {
+    @include mq('sm') {
       text-align: left;
       font-size: 1.5rem;
     }

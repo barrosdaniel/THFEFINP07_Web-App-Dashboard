@@ -2,11 +2,11 @@
   padding: 2rem 2rem 0;
   color: $colour-gray;
 
-  @include mq('lg') {
+  @include mq('md') {
     padding: 2rem;
   }
 
-  @include mq('lg') {
+  @include mq('md') {
     border-bottom: 1px solid $colour-gray-light;
   }
 
@@ -32,7 +32,7 @@
       margin-bottom: 0;
     }
 
-    @include mq('lg') {
+    @include mq('sm') {
       font-size: 1.5rem;
     }
   }
