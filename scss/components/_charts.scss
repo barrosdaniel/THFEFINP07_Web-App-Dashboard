@@ -15,7 +15,11 @@
     }
 
     &:first-child {
-      border-right: 1px solid $colour-gray-light;
+
+      @include mq('lg') {
+        border-right: 1px solid $colour-gray-light;
+      }
+
     }
   }
 
