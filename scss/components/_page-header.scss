@@ -25,12 +25,15 @@
     display: flex;
     justify-content: stretch;
     align-items: center;
-    padding: 0.5rem;
+    padding: 1rem;
 
     @include mq('md') {
       justify-content: flex-end;
       border-bottom: 1px solid $colour-gray-light;
       border-left: 1px solid $colour-gray-light;
+    }
+
+    @include mq('sm') {
       padding: 1rem 2rem;
     }
   }
