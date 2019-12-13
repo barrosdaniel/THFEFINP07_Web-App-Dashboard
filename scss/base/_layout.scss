@@ -1,6 +1,6 @@
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: 7.8rem repeat(11, 1fr);
   grid-template-rows: auto;
   max-width: 1200px;
   margin: 0 auto;
@@ -26,7 +26,7 @@
   grid-column: 1 / -1;
   padding-bottom: 4rem;
 
-  @include mq('sm') {
+  @include mq('md') {
     grid-column: 2 / -1;
   }
 }
