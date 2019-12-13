@@ -1,0 +1,40 @@
+// ========================================
+// MEDIA QUERIES
+// ========================================
+@mixin mq($break) {
+
+  // Extra small
+  @if ($break=='xs') {
+    @media (max-width: $break-xs) {
+      @content;
+    }
+  }
+
+  // Small
+  @if ($break=='sm') {
+    @media (min-width: $break-sm) {
+      @content;
+    }
+  }
+
+  // Medium
+  @if ($break=='md') {
+    @media (min-width: $break-md) {
+      @content;
+    }
+  }
+
+  // Large
+  @if ($break=='lg') {
+    @media (min-width: $break-lg) {
+      @content;
+    }
+  }
+
+  // Extra large
+  @if ($break=='xl') {
+    @media (min-width: $break-xl) {
+      @content;
+    }
+  }
+}

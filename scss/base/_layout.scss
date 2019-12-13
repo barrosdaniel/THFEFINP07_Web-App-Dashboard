@@ -11,10 +11,18 @@
 }
 
 .nav {
-  grid-column: 1 / 2;
+  grid-column: 1 / -1;
+
+  @include mq('sm') {
+    grid-column: 1 / 2;
+  }
 }
 
 .main {
-  grid-column: 2 / -1;
+  grid-column: 1 / -1;
   padding-bottom: 4rem;
+
+  @include mq('sm') {
+    grid-column: 2 / -1;
+  }
 }
