@@ -1,5 +1,9 @@
 .alert {
-  padding: 2rem;
+  padding: 2rem 2rem 0;
+
+  @include mq('sm') {
+    padding: 2rem;
+  }
 
   &-box {
     display: grid;
