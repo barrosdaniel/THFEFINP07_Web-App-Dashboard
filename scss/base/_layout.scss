@@ -12,9 +12,13 @@
 
 .nav {
   grid-column: 1 / -1;
+  justify-content: center;
+  align-items: center;
 
-  @include mq('sm') {
+  @include mq('md') {
     grid-column: 1 / 2;
+    justify-content: start;
+    align-items: center;
   }
 }
 

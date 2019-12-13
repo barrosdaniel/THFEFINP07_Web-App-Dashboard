@@ -1,24 +1,55 @@
 .nav {
   display: flex;
-  flex-direction: column;
-
+  flex-direction: row;
   background-color: $colour-primary-dark;
+
+  @include mq('sm') {}
+
+  @include mq('md') {
+    flex-direction: column;
+  }
+
 
   &__icon-container {
     display: flex;
     justify-content: center;
-    margin: 2rem 0 0;
-    padding: 1rem 2rem;
+    margin: 1rem;
+    padding: 1rem;
     cursor: pointer;
+
+    @include mq('sm') {
+      padding: 1rem 2rem;
+    }
+
+    @include mq('md') {
+      margin: 1rem 0;
+    }
+
   }
 
   &__icon-container {
     border-left: 3px solid transparent;
+    border-bottom: 3px solid transparent;
     fill: $colour-primary;
+    transition: 0.2s all;
 
     &--active {
-      border-left: 3px solid limegreen;
+      border-bottom: 3px solid limegreen;
       fill: $colour-white;
+
+      @include mq('md') {
+        border-bottom: 3px solid transparent;
+        border-left: 3px solid limegreen;
+      }
+    }
+
+    &:hover {
+      border-bottom: 3px solid limegreen;
+
+      @include mq('md') {
+        border-bottom: 3px solid transparent;
+        border-left: 3px solid limegreen;
+      }
     }
   }
 }

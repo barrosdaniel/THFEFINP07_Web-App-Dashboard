@@ -57,10 +57,14 @@ a {
 
 .nav {
   grid-column: 1/-1;
+  justify-content: center;
+  align-items: center;
 }
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .nav {
     grid-column: 1/2;
+    justify-content: start;
+    align-items: center;
   }
 }
 
@@ -187,23 +191,55 @@ a {
 
 .nav {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   background-color: #41448c;
+}
+@media (min-width: 768px) {
+  .nav {
+    flex-direction: column;
+  }
 }
 .nav__icon-container {
   display: flex;
   justify-content: center;
-  margin: 2rem 0 0;
-  padding: 1rem 2rem;
+  margin: 1rem;
+  padding: 1rem;
   cursor: pointer;
+}
+@media (min-width: 576px) {
+  .nav__icon-container {
+    padding: 1rem 2rem;
+  }
+}
+@media (min-width: 768px) {
+  .nav__icon-container {
+    margin: 1rem 0;
+  }
 }
 .nav__icon-container {
   border-left: 3px solid transparent;
+  border-bottom: 3px solid transparent;
   fill: #7477bf;
+  transition: 0.2s all;
 }
 .nav__icon-container--active {
-  border-left: 3px solid limegreen;
+  border-bottom: 3px solid limegreen;
   fill: #f9f9f9;
+}
+@media (min-width: 768px) {
+  .nav__icon-container--active {
+    border-bottom: 3px solid transparent;
+    border-left: 3px solid limegreen;
+  }
+}
+.nav__icon-container:hover {
+  border-bottom: 3px solid limegreen;
+}
+@media (min-width: 768px) {
+  .nav__icon-container:hover {
+    border-bottom: 3px solid transparent;
+    border-left: 3px solid limegreen;
+  }
 }
 
 .page-header {
