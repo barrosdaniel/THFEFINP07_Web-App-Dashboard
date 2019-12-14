@@ -14,6 +14,10 @@ const userSearch = document.querySelector('.user__search');
 const userAutocompleteContainer = document.querySelector('.user__autocomplete-container');
 const userMessage = document.querySelector('.user__message');
 const userSendButton = document.querySelector('.user__button--send');
+const switchEmailNotifications = document.querySelector('#switchEmailNotifications');
+const switchProfilePublic = document.querySelector('#switchProfilePublic');
+const selectTimeZone = document.querySelector('#selectTimeZone');
+const userSaveSettingsButton = document.querySelector('.user__button--save');
 
 
 
@@ -27,6 +31,8 @@ trafficButtonsList.addEventListener('click', ChangeTrafficChartPeriod);
 userSearch.addEventListener('input', searchUsers);
 userAutocompleteContainer.addEventListener('click', fillUserInput);
 userSendButton.addEventListener('click', sendUserMessage);
+userSaveSettingsButton.addEventListener('click', saveUserSettingsToLocalStorage);
+
 
 
 /* ======================================================================
@@ -133,6 +139,72 @@ function sendUserMessage(e) {
     alert(`Your message has been sent to ${userSearch.value}.`);
   }
 }
+
+// Settings Section
+async function getUserSettingsfromLocalStorage() {
+  if (localStorage) {
+    const savedSwitchEmailNotificationsState = localStorage.getItem('switchEmailNotifications');
+    const savedSwitchProfilePublicState = localStorage.getItem('switchProfilePublic');
+    const savedSelectTimeZoneState = localStorage.getItem('selectTimeZone');
+
+    const localStorageValues = {
+      switchEmailNotifications: savedSwitchEmailNotificationsState,
+      savedswitchProfilePublicState: savedSwitchProfilePublicState,
+      selectTimeZone: savedSelectTimeZoneState
+    };
+    return localStorageValues;
+  } else {
+    return `No data in local storage`;
+  }
+}
+
+getUserSettingsfromLocalStorage()
+  .then((localStorageValues) => {
+    console.log(localStorageValues);
+    const emailState = localStorageValues.switchEmailNotifications;
+    const profileState = localStorageValues.savedswitchProfilePublicState;
+    const timeZoneState = localStorageValues.selectTimeZone;
+    console.log(emailState);
+    console.log(profileState);
+    console.log(timeZoneState);
+
+    // Set 'Send email' switch UI state
+    if (emailState === 'false') {
+      switchEmailNotifications.checked = false;
+    } else if (emailState === 'true') {
+      switchEmailNotifications.checked = true;
+    }
+
+    // Set 'Public profile' switch UI state
+    if (profileState === 'false') {
+      switchProfilePublic.checked = false;
+    } else if (profileState === 'true') {
+      switchProfilePublic.checked = true;
+    }
+
+    // Set 'Time zone' selection UI state
+    if (timeZoneState === 'western') {
+      selectTimeZone.value = 'western';
+    } else if (timeZoneState === 'central') {
+      selectTimeZone.value = 'central';
+    } else if (timeZoneState === 'eastern') {
+      selectTimeZone.value = 'eastern';
+    }
+  })
+  .catch(function () {
+    console.log(`Error: Unable to load user settings from database.`);
+  });
+
+function saveUserSettingsToLocalStorage() {
+  const emailState = switchEmailNotifications.checked;
+  const profileState = switchProfilePublic.checked;
+  const timeZoneState = selectTimeZone.value;
+  localStorage.setItem('switchEmailNotifications', emailState);
+  localStorage.setItem('switchProfilePublic', profileState);
+  localStorage.setItem('selectTimeZone', timeZoneState);
+}
+
+
 
 /* ======================================================================
 Testing

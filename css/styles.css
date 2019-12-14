@@ -413,7 +413,7 @@ a {
 .traffic__button:not(:last-child) {
   margin-right: 1rem;
 }
-.traffic__button--active {
+.traffic__button--active, .traffic__button:hover {
   background-color: limegreen;
   color: #f9f9f9;
 }
@@ -494,7 +494,7 @@ a {
 }
 .social__board {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(291px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
   grid-gap: 1rem;
 }
 @media (min-width: 576px) {

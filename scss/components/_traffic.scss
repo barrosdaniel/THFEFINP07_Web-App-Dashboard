@@ -63,7 +63,8 @@
       margin-right: 1rem;
     }
 
-    &--active {
+    &--active,
+    &:hover {
       background-color: $colour-highlight;
       color: $colour-white;
     }
