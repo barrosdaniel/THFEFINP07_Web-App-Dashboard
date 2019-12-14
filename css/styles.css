@@ -94,13 +94,19 @@ a {
   }
 }
 .header__title {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: 300;
   order: 2;
   margin-top: 1rem;
 }
+@media (min-width: 320px) {
+  .header__title {
+    font-size: 2rem;
+  }
+}
 @media (min-width: 576px) {
   .header__title {
+    font-size: 2.5rem;
     order: 1;
     margin-top: 0;
   }
@@ -112,10 +118,15 @@ a {
   font-size: 0.8rem;
 }
 .header__widgets {
-  display: flex;
+  display: none;
   align-items: center;
   margin-left: auto;
   order: 1;
+}
+@media (min-width: 320px) {
+  .header__widgets {
+    display: flex;
+  }
 }
 @media (min-width: 576px) {
   .header__widgets {

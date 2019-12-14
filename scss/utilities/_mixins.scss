@@ -3,9 +3,16 @@
 // ========================================
 @mixin mq($break) {
 
+  // 2Extra small
+  @if ($break=='xxs') {
+    @media (min-width: $break-xxs) {
+      @content;
+    }
+  }
+
   // Extra small
   @if ($break=='xs') {
-    @media (max-width: $break-xs) {
+    @media (min-width: $break-xs) {
       @content;
     }
   }
