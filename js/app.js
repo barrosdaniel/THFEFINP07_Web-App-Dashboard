@@ -160,13 +160,9 @@ async function getUserSettingsfromLocalStorage() {
 
 getUserSettingsfromLocalStorage()
   .then((localStorageValues) => {
-    console.log(localStorageValues);
     const emailState = localStorageValues.switchEmailNotifications;
     const profileState = localStorageValues.savedswitchProfilePublicState;
     const timeZoneState = localStorageValues.selectTimeZone;
-    console.log(emailState);
-    console.log(profileState);
-    console.log(timeZoneState);
 
     // Set 'Send email' switch UI state
     if (emailState === 'false') {
