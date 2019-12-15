@@ -18,6 +18,7 @@ const switchEmailNotifications = document.querySelector('#switchEmailNotificatio
 const switchProfilePublic = document.querySelector('#switchProfilePublic');
 const selectTimeZone = document.querySelector('#selectTimeZone');
 const userSaveSettingsButton = document.querySelector('.user__button--save');
+const userCancelSettingsButton = document.querySelector('.user__button--cancel');
 
 
 
@@ -32,6 +33,7 @@ userSearch.addEventListener('input', searchUsers);
 userAutocompleteContainer.addEventListener('click', fillUserInput);
 userSendButton.addEventListener('click', sendUserMessage);
 userSaveSettingsButton.addEventListener('click', saveUserSettingsToLocalStorage);
+userCancelSettingsButton.addEventListener('click', cancelUserSettings);
 
 
 
@@ -158,38 +160,40 @@ async function getUserSettingsfromLocalStorage() {
   }
 }
 
-getUserSettingsfromLocalStorage()
-  .then((localStorageValues) => {
-    const emailState = localStorageValues.switchEmailNotifications;
-    const profileState = localStorageValues.savedswitchProfilePublicState;
-    const timeZoneState = localStorageValues.selectTimeZone;
+function renderUserUIStates() {
+  getUserSettingsfromLocalStorage()
+    .then((localStorageValues) => {
+      const emailState = localStorageValues.switchEmailNotifications;
+      const profileState = localStorageValues.savedswitchProfilePublicState;
+      const timeZoneState = localStorageValues.selectTimeZone;
 
-    // Set 'Send email' switch UI state
-    if (emailState === 'false') {
-      switchEmailNotifications.checked = false;
-    } else if (emailState === 'true') {
-      switchEmailNotifications.checked = true;
-    }
+      // Set 'Send email' switch UI state
+      if (emailState === 'false') {
+        switchEmailNotifications.checked = false;
+      } else if (emailState === 'true') {
+        switchEmailNotifications.checked = true;
+      }
 
-    // Set 'Public profile' switch UI state
-    if (profileState === 'false') {
-      switchProfilePublic.checked = false;
-    } else if (profileState === 'true') {
-      switchProfilePublic.checked = true;
-    }
+      // Set 'Public profile' switch UI state
+      if (profileState === 'false') {
+        switchProfilePublic.checked = false;
+      } else if (profileState === 'true') {
+        switchProfilePublic.checked = true;
+      }
 
-    // Set 'Time zone' selection UI state
-    if (timeZoneState === 'western') {
-      selectTimeZone.value = 'western';
-    } else if (timeZoneState === 'central') {
-      selectTimeZone.value = 'central';
-    } else if (timeZoneState === 'eastern') {
-      selectTimeZone.value = 'eastern';
-    }
-  })
-  .catch(function () {
-    console.log(`Error: Unable to load user settings from database.`);
-  });
+      // Set 'Time zone' selection UI state
+      if (timeZoneState === 'western') {
+        selectTimeZone.value = 'western';
+      } else if (timeZoneState === 'central') {
+        selectTimeZone.value = 'central';
+      } else if (timeZoneState === 'eastern') {
+        selectTimeZone.value = 'eastern';
+      }
+    })
+    .catch(function () {
+      console.log(`Error: Unable to load user settings from database.`);
+    });
+}
 
 function saveUserSettingsToLocalStorage() {
   const emailState = switchEmailNotifications.checked;
@@ -199,6 +203,20 @@ function saveUserSettingsToLocalStorage() {
   localStorage.setItem('switchProfilePublic', profileState);
   localStorage.setItem('selectTimeZone', timeZoneState);
 }
+
+function cancelUserSettings() {
+  console.log(`Cancel button clicked`);
+  // Reset user settings to determined value
+  localStorage.setItem('switchEmailNotifications', false);
+  localStorage.setItem('switchProfilePublic', false);
+  localStorage.setItem('selectTimeZone', 'eastern');
+
+  // Reload Switches and select UI states
+  renderUserUIStates();
+}
+
+// Initial load of the User Settings UI states
+renderUserUIStates();
 
 
 
@@ -313,7 +331,7 @@ const dailyTrafficOptions = {
   legend: {
     display: false
   }
-}
+};
 
 let dailyTrafficChart = new Chart(dailyTrafficCanvas, {
   type: 'bar',
