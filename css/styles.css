@@ -534,14 +534,14 @@ a {
   fill: #f9f9f9;
 }
 .social__icon--twitter {
-  transform: translateY(4px);
+  transform: translateY(4px) scale(0.9);
 }
 .social__icon--facebook {
   transform: translateX(-1px);
   transform: translateY(-2px);
 }
-.social__icon--twitter {
-  transform: translateY(4px);
+.social__icon--google-plus {
+  transform: scale(0.9);
 }
 .social__info-container {
   display: flex;

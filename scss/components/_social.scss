@@ -60,7 +60,7 @@
     fill: $colour-white;
 
     &--twitter {
-      transform: translateY(4px);
+      transform: translateY(4px) scale(0.9);
     }
 
     &--facebook {
@@ -68,8 +68,8 @@
       transform: translateY(-2px);
     }
 
-    &--twitter {
-      transform: translateY(4px);
+    &--google-plus {
+      transform: scale(0.9);
     }
 
 
